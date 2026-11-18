@@ -1,0 +1,15 @@
+import importlib
+
+module = importlib.import_module("36_most_frequent")
+
+
+def test_most_frequent_element():
+    assert module.most_frequent([1, 3, 2, 3, 4, 3, 2]) == 3
+
+
+def test_tie_returns_first_most_frequent_value():
+    assert module.most_frequent([1, 2, 1, 2]) in (1, 2)
+
+
+def test_empty_list():
+    assert module.most_frequent([]) is None
